@@ -1,0 +1,41 @@
+@use '../../styles/abstracts/variables' as *;
+@use '../../styles/abstracts/mixins' as *;
+
+.hero {
+  min-height: 90vh;
+  @include flex(column, center, center);
+
+  text-align: center;
+  padding-block: $spacing-24;
+  background: linear-gradient(135deg, $color-bg 0%, $color-bg-alt 100%);
+}
+
+.container {
+  @include container;
+
+  max-width: 800px;
+}
+
+.title {
+  font-size: $font-size-5xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-6;
+
+  @include respond-to(md) {
+    font-size: $font-size-5xl;
+  }
+}
+
+.subtitle {
+  font-size: $font-size-xl;
+  color: $color-text-muted;
+  margin-bottom: $spacing-10;
+  line-height: $line-height-base;
+}
+
+.actions {
+  @include flex(row, center, center, $spacing-4);
+
+  flex-wrap: wrap;
+}

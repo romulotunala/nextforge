@@ -1,0 +1,139 @@
+@use '../../styles/abstracts/variables' as *;
+@use '../../styles/abstracts/mixins' as *;
+
+.contact {
+  padding-block: $spacing-24;
+  background-color: $color-bg;
+}
+
+.container {
+  @include container;
+
+  max-width: 720px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: $spacing-4;
+}
+
+.subtitle {
+  text-align: center;
+  color: $color-text-muted;
+  margin-bottom: $spacing-12;
+}
+
+.configMessage {
+  padding: $spacing-4 $spacing-6;
+  background-color: #eff6ff;
+  border: 1px solid #93c5fd;
+  border-radius: $border-radius-md;
+  color: #1e3a8a;
+  margin-bottom: $spacing-8;
+  font-weight: $font-weight-medium;
+}
+
+.successMessage {
+  padding: $spacing-4 $spacing-6;
+  background-color: #d1fae5;
+  border: 1px solid #6ee7b7;
+  border-radius: $border-radius-md;
+  color: #065f46;
+  margin-bottom: $spacing-8;
+  font-weight: $font-weight-medium;
+}
+
+.errorMessage {
+  padding: $spacing-4 $spacing-6;
+  background-color: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: $border-radius-md;
+  color: #991b1b;
+  margin-bottom: $spacing-8;
+  font-weight: $font-weight-medium;
+}
+
+.form {
+  @include flex(column, stretch, flex-start, $spacing-6);
+}
+
+.row {
+  @include grid(1, $spacing-6);
+
+  @include respond-to(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.field {
+  @include flex(column, flex-start, flex-start, $spacing-2);
+}
+
+.label {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $color-text;
+}
+
+.optional {
+  font-weight: $font-weight-regular;
+  color: $color-text-muted;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: $spacing-3 $spacing-4;
+  font-size: $font-size-base;
+  color: $color-text;
+  background-color: $color-bg;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-md;
+  transition: border-color $transition-fast, box-shadow $transition-fast;
+
+  &:focus {
+    @include focus-ring;
+
+    border-color: $color-primary;
+  }
+
+  &[aria-invalid='true'] {
+    border-color: #dc2626;
+  }
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.error {
+  font-size: $font-size-sm;
+  color: #dc2626;
+}
+
+.submit {
+  align-self: flex-start;
+  padding: $spacing-3 $spacing-8;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  color: #fff;
+  background-color: $color-primary;
+  border: none;
+  border-radius: $border-radius-md;
+  cursor: pointer;
+  transition: background-color $transition-fast;
+
+  &:hover:not(:disabled) {
+    background-color: $color-primary-dark;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}

@@ -1,8 +1,15 @@
+import { Hero } from '@/components/sections/Hero';
+import { About } from '@/components/sections/About';
+import { Services } from '@/components/sections/Services';
+import { Contact } from '@/components/sections/Contact';
+
 export default function Home() {
   return (
-    <main>
-      <h1>nextforge</h1>
-      <p>Boilerplate para sites institucionais estáticos com Next.js.</p>
-    </main>
+    <>
+      <Hero />
+      <About />
+      <Services />
+      <Contact />
+    </>
   );
 }

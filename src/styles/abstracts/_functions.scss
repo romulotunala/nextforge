@@ -1,0 +1,27 @@
+// =============================================================================
+// Funções utilitárias
+// =============================================================================
+
+@use 'variables' as *;
+@use 'sass:color';
+
+/// Converte px para rem
+/// @param {number} $px - valor em pixels (sem unidade)
+/// @return {string} valor em rem
+@function rem($px) {
+  @return #{$px / 16}rem;
+}
+
+/// Retorna um tom mais claro de uma cor misturando com branco
+/// @param {color} $color
+/// @param {percentage} $amount - quanto de branco misturar
+@function tint($col, $amount) {
+  @return color.mix(white, $col, $amount);
+}
+
+/// Retorna um tom mais escuro de uma cor misturando com preto
+/// @param {color} $color
+/// @param {percentage} $amount - quanto de preto misturar
+@function shade($col, $amount) {
+  @return color.mix(black, $col, $amount);
+}

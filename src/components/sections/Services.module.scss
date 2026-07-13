@@ -1,0 +1,61 @@
+@use '../../styles/abstracts/variables' as *;
+@use '../../styles/abstracts/mixins' as *;
+
+.services {
+  padding-block: $spacing-24;
+  background-color: $color-bg-alt;
+}
+
+.container {
+  @include container;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: $spacing-16;
+}
+
+.grid {
+  @include grid(1, $spacing-8);
+
+  @include respond-to(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  @include flex(column, flex-start, flex-start, $spacing-4);
+
+  padding: $spacing-8;
+  background-color: $color-bg;
+  border-radius: $border-radius-lg;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+  transition: box-shadow $transition-base, transform $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-lg;
+    transform: translateY(-2px);
+  }
+}
+
+.icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.cardTitle {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+}
+
+.cardDescription {
+  font-size: $font-size-base;
+  color: $color-text-muted;
+  line-height: $line-height-base;
+  margin-bottom: 0;
+}
