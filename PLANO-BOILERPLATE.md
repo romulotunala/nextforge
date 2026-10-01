@@ -19,7 +19,7 @@ institucionais/empresariais, com deploy automatizado no GitHub Pages.
 | React | 19.2 (via Next 16) | — |
 | TypeScript | `strict: true` desde o início | evita retrofit doloroso depois |
 | Estilo | SCSS + CSS Modules | modular como Tailwind, sem classes utilitárias (requisito explícito) |
-| Lint JS/TS | ESLint 9 (flat config) + `@stylistic/eslint-plugin` | formatação (tab, aspas, `;`, 100 col) como regra de lint, não Prettier |
+| Lint JS/TS | ESLint 10 (flat config) + `@stylistic/eslint-plugin` | formatação (tab, aspas, `;`, 100 col) como regra de lint, não Prettier |
 | Lint CSS | Stylelint + `stylelint-config-standard-scss` | ESLint não cobre SCSS de verdade |
 | Git hooks | Husky + lint-staged + commitlint (Conventional Commits) | qualidade não depende de disciplina manual |
 | Testes unitários | Vitest + Testing Library | rápido, API compatível com Jest, zero config extra p/ TS |
