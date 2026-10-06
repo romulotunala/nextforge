@@ -11,12 +11,16 @@ export default defineConfig(
   {
     plugins: { '@stylistic': stylistic, '@next/next': next },
     rules: {
+      ...next.configs.recommended.rules,
+      ...next.configs['core-web-vitals'].rules,
       '@stylistic/indent': ['error', 2],
       '@stylistic/quotes': ['error', 'single'],
       '@stylistic/semi': ['error', 'always'],
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
       '@stylistic/max-len': ['error', { code: 100 }],
       '@stylistic/eol-last': ['error', 'always'],
+      '@stylistic/jsx-quotes': ['error', 'prefer-single'],
+      '@stylistic/operator-linebreak': ['error', 'before', { overrides: { '=': 'after' } }],
     },
   },
 );
