@@ -28,7 +28,7 @@ sem precisar montar estrutura, lint, testes e deploy do zero em todo projeto nov
 | App | Next.js 16 + App Router + `output: 'export'` |
 | UI | Seções institucionais base (`Hero`, `About`, `Services`, `Contact`) |
 | Estilo | SCSS + CSS Modules + tokens e mixins globais |
-| Qualidade | ESLint 9, Stylelint, Husky, lint-staged, commitlint |
+| Qualidade | ESLint 10, Stylelint, Husky, lint-staged, commitlint |
 | Testes | Vitest + Testing Library + Playwright |
 | Formulário | react-hook-form + zod + integração opcional com Formspree |
 | Deploy | GitHub Actions + GitHub Pages |
