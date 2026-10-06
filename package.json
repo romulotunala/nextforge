@@ -12,6 +12,7 @@
     "build": "next build",
     "lint": "eslint . && stylelint \"src/**/*.scss\"",
     "lint:fix": "eslint . --fix && stylelint \"src/**/*.scss\" --fix",
+    "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:e2e": "playwright test",
     "prepare": "husky"
